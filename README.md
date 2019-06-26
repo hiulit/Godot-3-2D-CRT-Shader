@@ -2,6 +2,8 @@
 
 A 2D shader for Godot 3 simulating a CRT.
 
-Orginal code by [knarkowicz](https://www.shadertoy.com/view/XtlSD7) from https://www.shadertoy.com/view/XtlSD7 .
+![A 2D shader for Godot 3 simulating a CRT](/example.png)
 
-Ported to Godot 3 by me.
+Orginal code by [knarkowicz](https://www.shadertoy.com/view/XtlSD7), taken from https://www.shadertoy.com/view/XtlSD7 .
+
+Ported to Godot 3 by me 😛.
