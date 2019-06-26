@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://crt_material.tres" type="Material" id=1]
+
+[node name="CRTLayer" type="CanvasLayer"]
+
+[node name="CRTShader" type="ColorRect" parent="."]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
