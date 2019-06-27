@@ -16,8 +16,19 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot-3-2D-CRT-Shader"
+run/main_scene="res://CRTLayer.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=320
+window/size/height=180
+window/size/test_width=640
+window/size/test_height=360
+window/stretch/mode="viewport"
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
