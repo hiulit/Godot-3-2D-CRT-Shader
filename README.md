@@ -2,8 +2,8 @@
 
 A 2D shader for Godot 3 simulating a CRT.
 
-![A 2D shader for Godot 3 simulating a CRT - OFF](/example-crt-off.png)
-![A 2D shader for Godot 3 simulating a CRT- ON](/example-crt-on.png)
+![A 2D shader for Godot 3 simulating a CRT - OFF](/example-images/example-crt-off.png)
+![A 2D shader for Godot 3 simulating a CRT- ON](/example-images/example-crt-on.png)
 
 ## Usage
 

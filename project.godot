@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot-3-2D-CRT-Shader"
-run/main_scene="res://CRTLayer.tscn"
+run/main_scene="res://demo_scene.tscn"
 config/icon="res://icon.png"
 
 [display]

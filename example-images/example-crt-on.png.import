@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/example-crt-on.png-421eb91114d9733d575c435b353dff8b.stex"
+path="res://.import/example-crt-on.png-c2c4e6fab91a721d425ce0f2083d2f67.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://example-crt-on.png"
-dest_files=[ "res://.import/example-crt-on.png-421eb91114d9733d575c435b353dff8b.stex" ]
+source_file="res://example-images/example-crt-on.png"
+dest_files=[ "res://.import/example-crt-on.png-c2c4e6fab91a721d425ce0f2083d2f67.stex" ]
 
 [params]
 
