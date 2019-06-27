@@ -4,4 +4,6 @@
 
 [resource]
 shader = ExtResource( 1 )
+shader_param/blend_color = Color( 1, 1, 1, 1 )
+shader_param/boost = 1.0
 
