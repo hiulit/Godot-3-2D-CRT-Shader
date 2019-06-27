@@ -29,6 +29,10 @@ If, for for reason, when loading the `crt_material.tres`, the `crt.shader` is em
 | --- | --- | --- | --- |
 | `boost` | `float` | `1.0` | Gives extra brightness to compensate for the scanlines. Range from `1.0` to `1.5` with `0.05` steps. |
 
+## Changelog
+
+See [CHANGELOG](/CHANGELOG.md).
+
 ## Authors
 
 * Me 😛 [hiulit](https://github.com/hiulit).
@@ -36,3 +40,7 @@ If, for for reason, when loading the `crt_material.tres`, the `crt.shader` is em
 ## Credits
 
 Orginal code by **knarkowicz**. Taken from https://www.shadertoy.com/view/XtlSD7 .
+
+## License
+
+[MIT License](/LICENSE).
