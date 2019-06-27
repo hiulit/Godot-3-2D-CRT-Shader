@@ -15,6 +15,20 @@ A 2D shader for Godot 3 simulating a CRT.
 
 If, for for reason, when loading `crt_material.tres` the `crt.shader` **Shader** is empty, just open it with any text editor, copy the code in the **Shader** editor and save it.
 
+## Shader Parameters
+
+### Blend Color
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `blend_color` | `vec4` | `vec4(1.0, 1.0, 1.0, 1.0)` | White is complete transparent. Black is complete opaque. The in-between colors get blended with the canvas. |
+
+### Boost
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `boost` | `float` | `1.0` | Gives extra brightness to compensate for the scanlines. Range from `1.0` to `1.5` with `0.05` steps. |
+
 ## Authors
 
 * Me 😛 [hiulit](https://github.com/hiulit).
