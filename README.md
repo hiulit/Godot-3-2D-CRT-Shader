@@ -27,7 +27,39 @@ If, for for reason, when loading the `crt_material.tres`, the `crt.shader` is em
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `boost` | `float` | `1.0` | Gives extra brightness to compensate for the scanlines. Range from `1.0` to `1.5` with `0.05` steps. |
+| `boost` | `float` | `1.2` | Gives extra brightness to compensate for the scanlines and the vignette. Range from `1.0` to `1.5` with `0.05` steps. |
+
+### Vignette opacity
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `vignette_opacity` | `float` | `0.3` | Control the opacity of the vignette. Range from `0.1` to `0.5` with `0.05` steps. |
+
+### Show grille
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `show_grille` | `bool` | `true` | Enable/disable the grille. |
+
+Only works in `window/stretch/mode="2d"`.
+
+### Show scanlines
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `show_scanlines` | `bool` | `true` | Enable/disable the scanlines. |
+
+### Show vignette
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `show_vignette` | `bool` | `true` | Enable/disable the vignette. |
+
+### Show curvature
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `show_curvature` | `bool` | `true` | Enable/disable the curvature. |
 
 ## Changelog
 

@@ -2,9 +2,13 @@
 
 [ext_resource path="res://crt_shader.shader" type="Shader" id=1]
 
-
 [resource]
 shader = ExtResource( 1 )
 shader_param/blend_color = Color( 1, 1, 1, 1 )
-shader_param/boost = 1.0
+shader_param/boost = 1.2
+shader_param/vignette_opacity = 0.35
+shader_param/show_grille = true
+shader_param/show_scanlines = true
+shader_param/show_vignette = true
+shader_param/show_curvature = true
 
