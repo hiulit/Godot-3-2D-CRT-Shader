@@ -8,6 +8,7 @@ uniform bool show_grille = true; // Grille only works in Stretch Mode: 2D.
 uniform bool show_scanlines = true;
 uniform bool show_vignette = true;
 uniform bool show_curvature = true;
+uniform vec2 screen_size = vec2(480.0, 270.0);
 
 vec2 CRTCurveUV(vec2 uv) {
 	if(show_curvature) {
@@ -30,18 +31,18 @@ void DrawVignette(inout vec3 color, vec2 uv) {
 }
 
 void DrawScanline(inout vec3 color, vec2 uv, float time) {
-	float scanline = clamp(0.95 + 0.05 * cos(3.14 * (uv.y + 0.008 * time) * 240.0 * 1.0), 0.0, 1.0);
-	float grille = 0.85 + 0.15 * clamp(1.5 * cos(3.14 * uv.x * 640.0 * 1.0), 0.0, 1.0);
+	float scanline = clamp(0.95 + 0.05 * sin(3.14159 * (uv.y + 0.008 * time) * screen_size.y), 0.0, 1.0);
+	float grille = 0.85 + 0.15 * clamp(1.5 * sin(3.14159 * uv.x * screen_size.x), 0.0, 1.0);
 	
-	if(show_scanlines && !show_grille) {
-		color *= scanline * boost;
-	} else if(!show_scanlines && show_grille) {
-		color *= grille * boost;
-	} else if(show_scanlines && show_grille) {
-		color *= scanline * grille * boost;
-	} else {
-		color *= boost;
+	if(show_scanlines) {
+		color *= scanline
 	}
+	
+	if(show_grille) {
+		color *= grille
+	}
+	
+	color *= boost;
 }
 
 void fragment() {

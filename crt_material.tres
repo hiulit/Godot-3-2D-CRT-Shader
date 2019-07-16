@@ -11,3 +11,4 @@ shader_param/show_grille = true
 shader_param/show_scanlines = true
 shader_param/show_vignette = true
 shader_param/show_curvature = true
+shader_param/screen_size = Vector2( 320, 180 )
