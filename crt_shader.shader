@@ -1,5 +1,4 @@
 shader_type canvas_item;
-render_mode blend_mix;
 
 uniform float boost : hint_range(1.0, 1.5, 0.01) = float(1.2);
 uniform float grille_opacity : hint_range(0.0, 1.0, 0.01) = float(0.85);
