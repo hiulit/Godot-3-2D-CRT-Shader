@@ -1,5 +1,5 @@
 *.DS_Store
-examples-images/*.import
+exampless/*.import
 
 # Godot-specific ignores
 .import/
