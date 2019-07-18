@@ -2,7 +2,7 @@ shader_type canvas_item;
 render_mode blend_mix;
 
 uniform float boost : hint_range(1.0, 1.5, 0.01) = float(1.2);
-uniform float vignette_opacity : hint_range(0.1, 0.5, 0.01) = float(0.3);
+uniform float vignette_opacity : hint_range(0.1, 0.5, 0.01) = float(0.2);
 uniform float scanline_speed : hint_range(0.0, 1.0, 0.01) = float(1.0);
 uniform bool show_grille = true; // Grille only works in Stretch Mode: 2D.
 uniform bool show_scanlines = true;

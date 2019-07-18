@@ -5,10 +5,11 @@
 [resource]
 shader = ExtResource( 1 )
 shader_param/boost = 1.2
-shader_param/vignette_opacity = 0.3
+shader_param/vignette_opacity = 0.2
 shader_param/scanline_speed = 1.0
 shader_param/show_grille = true
 shader_param/show_scanlines = true
 shader_param/show_vignette = true
 shader_param/show_curvature = true
 shader_param/screen_size = Vector2( 320, 180 )
+
