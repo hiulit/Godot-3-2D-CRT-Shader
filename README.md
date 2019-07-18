@@ -13,33 +13,45 @@ A 2D shader for Godot 3 simulating a CRT.
   * Go to the **Material** section.
   * Click on the `[empty]` **Material** and load `crt_material.tres`.
 
-If, for for reason, when loading the `crt_material.tres`, the `crt.shader` is empty, just open it with any text editor, copy the code in the **Shader** editor and save it.
+If for for reason, when loading the `crt_material.tres`, the `crt.shader` is empty, just open it with any text editor, copy the code in the **Shader** editor and save it.
 
 ## Shader Parameters
-
-### Blend Color
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| `blend_color` | `vec4` | `vec4(1.0, 1.0, 1.0, 1.0)` | **White** is complete transparent. **Black** is complete opaque. The in-between colors get blended with the canvas. |
 
 ### Boost
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `boost` | `float` | `1.2` | Gives extra brightness to compensate for the scanlines and the vignette. Range from `1.0` to `1.5` with `0.05` steps. |
+| `boost` | `float` | `1.2` | Gives extra brightness to compensate for the grille, the scanlines and the vignette. Range from `1.0` to `1.5` with `0.01` steps. |
+
+### Grille opacity
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `grille_opacity` | `float` | `0.85` | Controls the opacity of the grille. `0.0` is complete opaque. Range from `0.0` to `1.0` with `0.01` steps. |
+
+### Scanlines opacity
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `scanlines_opacity` | `float` | `0.95` | Controls the opacity of the scanlines. `0.0` is complete opaque. Range from `0.0` to `1.0` with `0.01` steps. |
 
 ### Vignette opacity
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `vignette_opacity` | `float` | `0.3` | Control the opacity of the vignette. Range from `0.1` to `0.5` with `0.05` steps. |
+| `vignette_opacity` | `float` | `0.2` | Controls the opacity of the vignette. Range from `0.1` to `0.5` with `0.01` steps. |
+
+### Scanlines speed
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `scanlines_speed` | `float` | `1.0` | Controls the speed of the scanlines. Range from `0.0` to `1.0` with `0.01` steps. |
 
 ### Show grille
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `show_grille` | `bool` | `true` | Enable/disable the grille. |
+| `show_grille` | `bool` | `true` | Enables/disables the grille. |
 
 Only works in `window/stretch/mode="2d"`.
 
@@ -53,13 +65,21 @@ Only works in `window/stretch/mode="2d"`.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `show_vignette` | `bool` | `true` | Enable/disable the vignette. |
+| `show_vignette` | `bool` | `true` | Enables/disables the vignette. |
 
 ### Show curvature
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `show_curvature` | `bool` | `true` | Enable/disable the curvature. |
+| `show_curvature` | `bool` | `true` | Enables/disables the curvature. |
+
+### Screen size
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `screen_size` | `vec2` | `(320.0, 180.0)` | Controls how many grille lines and scanlines appear. Having fewer grille lines and scanlines will make them larger, which makes it harder for the moire effect to appear. |
+
+Setting it to your project's `windows/size` should work fine, but you can play with it to get the results best fitted to your liking.
 
 ## Changelog
 
@@ -74,7 +94,7 @@ See [CHANGELOG](/CHANGELOG.md).
 Thanks to:
 
 * **knarkowicz** - For the orginal shader code, taken from https://www.shadertoy.com/view/XtlSD7.
-* [CowThing](https://github.com/CowThing) - For helping a lot bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
+* [CowThing](https://github.com/CowThing) - For helping **a lot** in bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
 
 ## License
 
