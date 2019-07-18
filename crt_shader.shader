@@ -31,8 +31,8 @@ void DrawVignette(inout vec3 color, vec2 uv) {
 }
 
 void DrawScanline(inout vec3 color, vec2 uv, float time) {
-	float scanline = clamp(0.95 + 0.05 * sin(3.14159 * (uv.y + 0.008 * time) * screen_size.y), 0.0, 1.0);
-	float grille = 0.85 + 0.15 * clamp(1.5 * sin(3.14159 * uv.x * screen_size.x), 0.0, 1.0);
+	float scanline = clamp(0.95 + 0.05 * sin(3.1415926535 * (uv.y + 0.008 * time) * screen_size.y), 0.0, 1.0);
+	float grille = 0.85 + 0.15 * clamp(1.5 * sin(3.1415926535 * uv.x * screen_size.x), 0.0, 1.0);
 	
 	if(show_scanlines) {
 		color *= scanline
