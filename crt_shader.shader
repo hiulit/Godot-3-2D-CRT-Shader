@@ -8,7 +8,7 @@ uniform bool show_grille = true; // Grille only works in Stretch Mode: 2D.
 uniform bool show_scanlines = true;
 uniform bool show_vignette = true;
 uniform bool show_curvature = true;
-uniform vec2 screen_size = vec2(480.0, 270.0);
+uniform vec2 screen_size = vec2(320.0, 180.0);
 
 vec2 CRTCurveUV(vec2 uv) {
 	if(show_curvature) {
