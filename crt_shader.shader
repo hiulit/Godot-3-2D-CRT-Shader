@@ -3,6 +3,7 @@ render_mode blend_mix;
 
 uniform float boost : hint_range(1.0, 1.5, 0.01) = float(1.2);
 uniform float grille_opacity : hint_range(0.0, 1.0, 0.01) = float(0.85);
+uniform float scanlines_opacity : hint_range(0.0, 1.0, 0.01) = float(0.95);
 uniform float vignette_opacity : hint_range(0.1, 0.5, 0.01) = float(0.2);
 uniform float scanline_speed : hint_range(0.0, 1.0, 0.01) = float(1.0);
 uniform bool show_grille = true; // Grille only works in Stretch Mode: 2D.
@@ -32,7 +33,7 @@ void DrawVignette(inout vec3 color, vec2 uv) {
 }
 
 void DrawScanline(inout vec3 color, vec2 uv, float time) {
-	float scanline = clamp(0.95 + 0.05 * sin(3.1415926535 * (uv.y + 0.008 * time) * screen_size.y), 0.0, 1.0);
+	float scanline = clamp((scanlines_opacity - 0.05) + 0.05 * sin(3.1415926535 * (uv.y + 0.008 * time) * screen_size.y), 0.0, 1.0);
 	float grille = (grille_opacity - 0.15) + 0.15 * clamp(1.5 * sin(3.1415926535 * uv.x * screen_size.x), 0.0, 1.0);
 
 	if(show_scanlines) {
