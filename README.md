@@ -71,7 +71,10 @@ See [CHANGELOG](/CHANGELOG.md).
 
 ## Credits
 
-Orginal code by **knarkowicz**. Taken from https://www.shadertoy.com/view/XtlSD7 .
+Thanks to:
+
+* **knarkowicz** - For the orginal shader code, taken from https://www.shadertoy.com/view/XtlSD7.
+* [CowThing](https://github.com/CowThing) - For helping a lot bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
 
 ## License
 
