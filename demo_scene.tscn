@@ -8,7 +8,6 @@
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.8, 0.74902, 0.501961, 1 )
 
 [node name="icon" type="Sprite" parent="."]
 position = Vector2( 71.3842, 70.2482 )
@@ -22,3 +21,4 @@ texture = ExtResource( 1 )
 material = ExtResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+
