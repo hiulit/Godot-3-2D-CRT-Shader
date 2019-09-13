@@ -53,8 +53,6 @@ If for for reason, when loading the `crt_material.tres`, the `crt.shader` is emp
 | --- | --- | --- | --- |
 | `show_grille` | `bool` | `true` | Enables/disables the grille. |
 
-Only works in `window/stretch/mode="2d"`.
-
 ### Show scanlines
 
 | Name | Type | Default | Description |
@@ -72,6 +70,8 @@ Only works in `window/stretch/mode="2d"`.
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `show_curvature` | `bool` | `true` | Enables/disables the curvature. |
+
+Works best in `window/stretch/mode="2d"`.
 
 ### Screen size
 
