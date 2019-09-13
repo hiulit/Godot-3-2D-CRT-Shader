@@ -21,7 +21,7 @@ If for for reason, when loading the `crt_material.tres`, the `crt.shader` is emp
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `boost` | `float` | `1.2` | Gives extra brightness to compensate for the grille, the scanlines and the vignette. Range from `1.0` to `1.5` with `0.01` steps. |
+| `boost` | `float` | `1.2` | Gives extra brightness to compensate for the grille, the scanlines and the vignette. Range from `1.0` to `2.0` with `0.01` steps. |
 
 ### Grille opacity
 
@@ -81,6 +81,24 @@ Only works in `window/stretch/mode="2d"`.
 
 Setting it to your project's `windows/size` should work fine, but you can play with it to get the results best fitted to your liking.
 
+### Aberration amount
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `aberration_amount` | `float` | `0.0` | Controls the amount of chromatic aberration. Range from `0.0` to `10.0` with `1.0` steps. |
+
+### Move aberration
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `move_aberration` | `bool` | `false` | Enables/disables the chromatic aberration movement. |
+
+### Aberration speed
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `aberration_speed` | `float` | `1.0` | Controls the speed of the moving chromatic aberration (the greater the value the slower the movement). Range from `0.01` to `10.0` with `0.01` steps. |
+
 ## Changelog
 
 See [CHANGELOG](/CHANGELOG.md).
@@ -95,6 +113,7 @@ Thanks to:
 
 * **knarkowicz** - For the orginal shader code, taken from https://www.shadertoy.com/view/XtlSD7.
 * [CowThing](https://github.com/CowThing) - For helping **a lot** in bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
+* [uheartbeast](https://twitter.com/uheartbeast) - For the amazing [chromatic aberration shader video tutorial](https://www.youtube.com/watch?v=-PJOHAsBcoI).
 
 ## License
 
