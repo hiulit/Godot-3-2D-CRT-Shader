@@ -1,15 +1,18 @@
 shader_type canvas_item;
 
-uniform float boost : hint_range(1.0, 1.5, 0.01) = float(1.2);
+uniform float boost : hint_range(1.0, 2.0, 0.01) = float(1.2);
 uniform float grille_opacity : hint_range(0.0, 1.0, 0.01) = float(0.85);
 uniform float scanlines_opacity : hint_range(0.0, 1.0, 0.01) = float(0.95);
 uniform float vignette_opacity : hint_range(0.1, 0.5, 0.01) = float(0.2);
 uniform float scanlines_speed : hint_range(0.0, 1.0, 0.01) = float(1.0);
-uniform bool show_grille = true; // Grille only works in Stretch Mode: 2D.
+uniform bool show_grille = true;
 uniform bool show_scanlines = true;
 uniform bool show_vignette = true;
-uniform bool show_curvature = true;
+uniform bool show_curvature = true; // Curvature works best on stretch mode 2d.
 uniform vec2 screen_size = vec2(320.0, 180.0);
+uniform float aberration_amount : hint_range(0.0, 10.0, 1.0) = float(0.0);
+uniform bool move_aberration = false;
+uniform float aberration_speed : hint_range(0.01, 10.0, 0.01) = float(1.0);
 
 vec2 CRTCurveUV(vec2 uv) {
 	if(show_curvature) {
@@ -24,7 +27,7 @@ vec2 CRTCurveUV(vec2 uv) {
 void DrawVignette(inout vec3 color, vec2 uv) {
 	if(show_vignette) {
 		float vignette = uv.x * uv.y * (1.0 - uv.x) * (1.0 - uv.y);
-		vignette = clamp(pow(16.0 * vignette, vignette_opacity), 0.0, 1.0);
+		vignette = clamp(pow((screen_size.x / 4.0) * vignette, vignette_opacity), 0.0, 1.0);
 		color *= vignette;
 	} else {
 		return;
@@ -49,6 +52,18 @@ void DrawScanline(inout vec3 color, vec2 uv, float time) {
 void fragment() {
 	vec2 screen_crtUV = CRTCurveUV(SCREEN_UV);
 	vec3 color = texture(SCREEN_TEXTURE, screen_crtUV).rgb;
+	
+	if (aberration_amount > 0.0) {
+		float adjusted_amount = aberration_amount / screen_size.x;
+		
+		if (move_aberration == true) {
+			adjusted_amount = (aberration_amount / screen_size.x) * cos((2.0 * 3.14159265359) * (TIME / aberration_speed));
+		} 
+		
+		color.r = texture(SCREEN_TEXTURE, vec2(screen_crtUV.x + adjusted_amount, screen_crtUV.y)).r;
+		color.g = texture(SCREEN_TEXTURE, screen_crtUV).g;
+		color.b = texture(SCREEN_TEXTURE, vec2(screen_crtUV.x - adjusted_amount, screen_crtUV.y)).b;
+	}
 	
 	vec2 crtUV = CRTCurveUV(UV);
 	if (crtUV.x < 0.0 || crtUV.x > 1.0 || crtUV.y < 0.0 || crtUV.y > 1.0) {
