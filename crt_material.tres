@@ -4,17 +4,18 @@
 
 [resource]
 shader = ExtResource( 1 )
-shader_param/boost = 1.2
-shader_param/grille_opacity = 0.85
-shader_param/scanlines_opacity = 0.95
-shader_param/vignette_opacity = 0.2
-shader_param/scanlines_speed = 1.0
-shader_param/show_grille = true
-shader_param/show_scanlines = true
-shader_param/show_vignette = true
-shader_param/show_curvature = true
 shader_param/screen_size = Vector2( 320, 180 )
+shader_param/show_curvature = true
+shader_param/curvature_x_amount = 6.0
+shader_param/curvature_y_amount = 4.0
+shader_param/corner_color = Color( 0, 0, 0, 1 )
+shader_param/show_vignette = true
+shader_param/vignette_opacity = 0.2
+shader_param/show_horizontal_scan_lines = true
+shader_param/horizontal_scan_lines_amount = 180.0
+shader_param/horizontal_scan_lines_opacity = 1.0
+shader_param/show_vertical_scan_lines = false
+shader_param/vertical_scan_lines_amount = 320.0
+shader_param/vertical_scan_lines_opacity = 1.0
+shader_param/boost = 1.2
 shader_param/aberration_amount = 0.0
-shader_param/move_aberration = false
-shader_param/aberration_speed = 1.0
-
