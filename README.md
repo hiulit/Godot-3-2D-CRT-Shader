@@ -114,7 +114,7 @@ Thanks to:
 * **knarkowicz** - For the orginal shader code, taken from https://www.shadertoy.com/view/XtlSD7.
 * [CowThing](https://github.com/CowThing) - For helping **a lot** in bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
 * [uheartbeast](https://twitter.com/uheartbeast) - For the amazing [chromatic aberration shader video tutorial](https://www.youtube.com/watch?v=-PJOHAsBcoI).
-* [Miltag](https://github.com/Miltage) - For helping in fixing an issue with the scan lines opacity [#5](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/5).
+* [Miltage](https://github.com/Miltage) - For helping in fixing an issue with the scan lines opacity [#5](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/5).
 
 ## License
 
