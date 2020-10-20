@@ -71,9 +71,11 @@ Works best in `window/stretch/mode="2d"`.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `horizontal_scan_lines_amount` | `float` | `180.0` | Controls how many horizontal scan lines appear. |
+| `horizontal_scan_lines_amount` | `float` | `180.0` | Controls how many horizontal scan lines appear. Range from `0.0` to `180.0` with `0.1` steps. |
 
 Setting it to your project's `windows/size/height` should work fine, but you can play with it to get the results best fitted to your liking.
+
+Having fewer scan lines will make them larger, which makes it harder for the moire effect to appear.
 
 ### Horizontal scan lines opacity
 
@@ -91,9 +93,11 @@ Setting it to your project's `windows/size/height` should work fine, but you can
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `vertical_scan_lines_amount` | `float` | `320.0` | Controls how many vertical scan lines appear. |
+| `vertical_scan_lines_amount` | `float` | `320.0` | Controls how many vertical scan lines appear.  Range from `0.0` to `320.0` with `0.1` steps. |
 
 Setting it to your project's `windows/size/width` should work fine, but you can play with it to get the results best fitted to your liking.
+
+Having fewer scan lines will make them larger, which makes it harder for the moire effect to appear.
 
 ### Vertical scan lines opacity
 
@@ -111,7 +115,7 @@ Setting it to your project's `windows/size/width` should work fine, but you can 
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `aberration_amount` | `float` | `0.0` | Controls the amount of chromatic aberration. Range from `0.0` to `10.0` with `1.0` steps. |
+| `aberration_amount` | `float` | `0.0` | Controls the amount of chromatic aberration. Range from `0.0` to `10.0` with `0.01` steps. |
 
 ## Changelog
 
@@ -128,6 +132,7 @@ Thanks to:
 * **knarkowicz** - For the orginal shader code, taken from https://www.shadertoy.com/view/XtlSD7.
 * [CowThing](https://github.com/CowThing) - For helping **a lot** in bringing actual distortion and many other improvements to the shader with [#1](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/1).
 * [uheartbeast](https://twitter.com/uheartbeast) - For the amazing [chromatic aberration shader video tutorial](https://www.youtube.com/watch?v=-PJOHAsBcoI).
+* [Miltag](https://github.com/Miltage) - For helping in fixing an issue with the scan lines opacity [#5](https://github.com/hiulit/Godot-3-2D-CRT-Shader/pull/5).
 * [Tom (Let's GameDev)](https://twitter.com/letsgamedev) - For the amazing [CRT shader video tutorial](https://www.youtube.com/watch?v=Dn8joy4tP2Q), which I took the scan lines from.
 
 ## License
